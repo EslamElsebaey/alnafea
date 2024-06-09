@@ -2096,7 +2096,7 @@ header {
   animation: unset;
 }
 .servies-content .whats-btn::after {
-  background-color: #128c7e;
+  background-color: #25d366;
 }
 
 @media only screen and (max-width: 767px) {
