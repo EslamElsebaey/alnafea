@@ -1,0 +1,129 @@
+.mainBanner {
+  .mainslider-item {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper{
+    height: 100%;
+  }
+  .container{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 2;
+    width: 100%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.mainBanner {
+  .mainslider-item {
+    position: relative;
+  }
+
+}
+
+.mainBanner {
+  .swiper-pagination-bullet {
+    background-color: #000000;
+    opacity: 0.502;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+  }
+}
+
+
+.banner-desc {
+  width: 539px;
+  .main-title {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: start;
+  }
+}
+
+.mainBanner {
+  figure {
+    position: relative;
+    margin: 0;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset-inline-start: 0;
+      top: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.702) 100%);
+      z-index: 2;
+    }
+  }
+}
+
+.mainBanner {
+  .swiper-pagination {
+    z-index: 8;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    right: 50px;
+    left: unset;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    left: 50px;
+    right: unset;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+  }
+}
+
+@include max-992 {
+  .banner-desc .main-title{
+    font-size: 40px;
+  }
+}
+
+@include max-768 {
+  .mainBanner {
+    .swiper-pagination {
+      bottom: 10px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  .banner-desc .main-title{
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .banner-desc {
+    width: 100%;
+  }
+.mainBanner .container{
+  justify-content: center;
+}
+  .mainBanner .mainslider-item img {
+    height: 250px;
+  }
+}

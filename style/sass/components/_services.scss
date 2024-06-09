@@ -1,0 +1,117 @@
+.services {
+  padding: 95px 0;
+  background-image: url(../images/services-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  &::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(-270deg, rgba(0,0,0,0) 0%, rgba(40,56,144,1) 70%);
+     z-index: -1;
+
+  }
+}
+.servies-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 570px;
+  row-gap: 30px;
+  .title {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+  .desc {
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  .anchors {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    a {
+      height: 50px;
+      border-radius: 25px;
+    }
+  }
+  .contact-btn:first-of-type {
+    min-width: 154px;
+    &::after {
+      background-color: #fff;
+    }
+    &:hover {
+      .text,
+      .icon {
+        color: #25aae3;
+      }
+    }
+  }
+  .whats-btn {
+    background-color: #11c347;
+    min-width: 170px;
+    transition: all ease-out .3s;
+    .icon {
+      transition: transform linear 0.2s;
+    }
+    &:hover {
+      .icon {
+        animation: unset;
+      }
+    }
+    &::after {
+      background-color: #128c7e;
+    }
+  }
+}
+
+
+@include max-768 {
+    .servies-content{
+        max-width: 100%;
+        align-items: center;
+        row-gap: 22px;
+    }
+    .servies-content .title{
+        font-size: 22px;
+    }
+    .servies-content .title{
+        text-align: center;
+        width: 100%;
+    }
+    .services{
+        padding: 50px  0;
+    }
+    .servies-content .desc{
+        text-align: center;
+        line-height: 1.6;
+        font-size: 18px;
+    }
+   .servies-content .anchors a{
+    min-width: unset;
+    max-width:  calc( 50% - 5px);
+    padding: 0;
+    height: 47px;
+   }
+   .servies-content .contact-btn:first-of-type{
+    min-width: unset;
+    width: 154px;
+   }
+   .servies-content .whats-btn{
+    width: 170px;
+   }
+   .servies-content .anchors{
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+   }
+}

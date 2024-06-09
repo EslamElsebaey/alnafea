@@ -1,0 +1,93 @@
+.targets {
+  padding-bottom: 100px;
+}
+.targets-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.targets-child {
+  background-color: #ffffff;
+  border: 2px solid #f2f2f2;
+  padding-top: 40px;
+  padding-inline: 35px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icon-holder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #25aae3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    .icon {
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+  .title {
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #283890;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .desc {
+    font-size: 18px;
+    text-align: justify;
+    text-align-last: center;
+    margin: 0;
+    line-height: 34px;
+    color: #333333;
+  }
+}
+
+@include max-1200 {
+  .targets-child {
+    padding-inline: 20px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+}
+
+@include max-992 {
+  .targets-parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include max-768 {
+  .targets {
+    padding-bottom: 60px;
+  }
+  .targets-child {
+    padding-top: 25px;
+    padding-inline: 15px;
+    padding-bottom: 25px;
+  }
+  .targets-child .desc {
+    line-height: 31px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .targets-child .icon-holder {
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  .targets-child .icon-holder .icon {
+    font-size: 27px;
+  }
+
+  .targets-parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .targets-child .title {
+    font-size: 20px;
+  }
+}

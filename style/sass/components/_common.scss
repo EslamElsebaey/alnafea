@@ -1,0 +1,170 @@
+.contact-btn,
+.mybutton.getquote,
+.mybutton.readmore,
+.download-profile-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform-origin: 50%;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: #283890;
+    transition: all ease-out 0.2s;
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.myButton {
+  padding-inline: 20px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #59585a;
+  width: max-content;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #89221c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all linear 0.2s;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.news,
+.clients,
+.products,
+.single-product {
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    opacity: 0.302;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #f01a22;
+    opacity: 1;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    left: -75px;
+    right: unset;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    right: -75px;
+    left: unset;
+  }
+}
+
+.mainBanner,
+.news,
+.clients,
+.products,
+.single-product {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all linear 0.2s;
+    overflow: hidden;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      background-color: #ec1b25;
+      z-index: -1;
+      transition: all linear 0.2s;
+    }
+    &:hover {
+      &::after {
+        height: 100%;
+      }
+    }
+    .icon {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}
+
+
+.mybutton.getquote,
+.mybutton.readmore{
+  &::after{
+    background-color: #25aae3;
+  }
+}
+
+@include max-1300{
+  .news .swiper-button-next, .news .swiper-rtl .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-rtl .swiper-button-prev, .products .swiper-button-next, .products .swiper-rtl .swiper-button-prev, .single-product .swiper-button-next, .single-product .swiper-rtl .swiper-button-prev{
+    left: -60px;
+  }
+  .news .swiper-button-prev, .news .swiper-rtl .swiper-button-next, .clients .swiper-button-prev, .clients .swiper-rtl .swiper-button-next, .products .swiper-button-prev, .products .swiper-rtl .swiper-button-next, .single-product .swiper-button-prev, .single-product .swiper-rtl .swiper-button-next{
+    right: -60px;
+  }
+}
+
+@include max-992 {
+  .news .swiper-button-next,
+  .news .swiper-button-prev,
+  .single-product .swiper-button-next,
+  .single-product .swiper-button-prev,
+  .clients .swiper-button-next,
+  .clients .swiper-button-prev,
+  .products .swiper-button-next,
+  .products .swiper-button-prev  , 
+   .mainBanner .swiper-button-next,
+  .mainBanner .swiper-button-prev{
+    display: none;
+  }
+}
+
+@include max-768 {
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}

@@ -1,0 +1,126 @@
+.about {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.about-content {
+  .title {
+    font-size: 30px;
+    color: #283890;
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+  .para {
+    font-size: 18px;
+    line-height: 34px;
+    color: #333333;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+  .anchors {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+  }
+}
+.about-parent{
+  display: grid;
+  grid-template-columns: 488px 1fr ;
+  column-gap: 60px;
+}
+
+.mybutton {
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding-inline: 30px;
+  transition: all linear .2s;
+}
+.mybutton.readmore {
+  background-color: #f2f2f2;
+  min-width: 131px;
+  color: #333333;
+  &:hover{
+    color: #fff;
+  }
+}
+.mybutton.getquote {
+  min-width: 173px;
+  background-color: #283890;
+  color: #fff;
+}
+.about-content{
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-img-holder {
+  width: 488px;
+  aspect-ratio: 488 / 380;
+  display: flex;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@include max-1200 {
+  .about-img-holder{
+    width: 400px;
+  }
+  .about-parent{
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+@include max-992 {
+    .about-parent{
+    grid-template-columns:  1fr;
+  }
+  .about-img-holder{
+    margin-inline: auto;
+  }
+    .about-content{
+        align-items: center;
+    }
+    .about-content .para{
+        text-align: center;
+    }
+      .about-content .anchors{
+        justify-content: center;
+      }
+}
+
+@include max-768 {
+  .about-img-holder{
+    width: 100%;
+  }
+   .mybutton{
+      height: 45px;
+    }
+    .about{
+        padding: 50px 0 ;
+    }
+    .about-content .title{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 17px;
+    }
+    .about-content .para{
+        font-size: 16px;
+        margin-bottom: 27px;
+        line-height: 1.8;
+    }
+    .mybutton.getquote , .mybutton.readmore{
+        min-width: unset;
+        white-space: nowrap;
+    }
+}
